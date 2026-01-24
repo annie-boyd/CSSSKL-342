@@ -6,6 +6,10 @@
  *
  * Created by Michael Stiber
  * Modified by Yang Peng on 01/12/18
+ * 
+ * Questions answered by Annie Boyd
+ * 01/23/2026
+ * 
  */
 #include <string>
 
@@ -18,10 +22,10 @@ class SuperInt {
 
   // For demonstrating lvalues
   //int& theValue(void);
-  const int& theValue(void);
+  int& theValue(void); //changed from const int& to int&
 
  private:
-  int myValue;
+  int myValue; 
   std::string myName;
 
   // Neat trick: making this private prevents creating unitialized

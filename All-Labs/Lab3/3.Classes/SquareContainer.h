@@ -1,6 +1,9 @@
 /*
  *  SquareContainer.h
  *  Class-example
+ * 
+ *  Questions answered by Annie Boyd
+ *  01/24/2026
  *
  */
 
@@ -42,6 +45,8 @@ class SquareContainer {
 	
   // Current container capacity
   unsigned capacity(void) const;
+
+  SquareContainer& operator = (const SquareContainer&);
 	
  private:
   // Utility functions

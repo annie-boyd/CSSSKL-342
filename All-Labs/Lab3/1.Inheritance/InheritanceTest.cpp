@@ -4,6 +4,9 @@
  *
  *  Created by Prof. Michael Stiber
  *  Modified by Yang Peng on 01/12/2018
+ * 
+ *  Questions answered by Annie Boyd
+ *  01/23/2026
  *
 */
 
@@ -26,11 +29,11 @@ int main (int argc, char * const argv[]) {
         C c1;
         
         cout << endl << "Creating a named A." << endl;
-		A a2("a2");
+		A a2("a2", 2, 3);
         cout << endl << "Creating a named B." << endl;
-		B b2("b2");
+		B b2("b2",2);
         cout << endl << "Creating a named C." << endl;
-		C c2("c2");
+		C c2("c2",1,2);
 
         cout << endl;
     }

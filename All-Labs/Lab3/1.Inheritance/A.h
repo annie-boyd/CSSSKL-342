@@ -5,6 +5,8 @@
  *  Created by Prof. Michael Stiber
  *  Modified by Yang Peng on 01/12/2018
  *
+ *  Questions answered by Annie Boyd
+ *  01/23/2026
  */
 
 #ifndef A_H
@@ -17,7 +19,7 @@ class A
 {
 public:
     A();
-    A(string name);
+    A(string name, int testData1, int testData2); //Q1-4: Added parameters to the constructor
 	~A();
     
     void setN(const char* s);
@@ -25,6 +27,8 @@ public:
     
 private:
     string n;
+    int testData1;
+    int testData2;
 };
 
 #endif

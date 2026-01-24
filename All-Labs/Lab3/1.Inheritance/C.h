@@ -5,6 +5,8 @@
  *  Created by Prof. Michael Stiber
  *  Modified by Yang Peng on 01/12/2018
  *
+ * Questions answered by Annie Boyd
+ * 01/23/2026
  */
 
 #ifndef C_H
@@ -15,12 +17,12 @@ class C : public B
 {
 public:
     C();
-    C(string name);
+    C(string name, int testDataB, double testDataC); //Q5: Added parameters to the constructor
 	~C();
     
     
 private:
-    
+    int testDataC;
 };
 
 #endif

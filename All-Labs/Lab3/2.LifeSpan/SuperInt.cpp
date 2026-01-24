@@ -6,6 +6,9 @@
  *
  * Created by Michael Stiber
  * Modified by Yang Peng on 01/12/18
+ * 
+ * Questions answered by Annie Boyd
+ * 01/23/2026
  */
 
 #include <iostream>
@@ -27,7 +30,7 @@ SuperInt::~SuperInt()
 // For demonstrating lvalues
 
 
-const int& SuperInt::theValue()
+int& SuperInt::theValue() // Changed from const int& to int&
 {
   cout << "Getting value (can't use as lvalue) of a SuperInt called " + myName << endl;
   // myValue = 3;

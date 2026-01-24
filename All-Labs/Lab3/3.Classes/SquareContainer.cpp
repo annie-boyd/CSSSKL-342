@@ -1,6 +1,9 @@
 /*
  *  SquareContainer.cpp
  *  Class-example
+ * 
+ *  Questions answered by Annie Boyd
+ *  01/24/2026
  *
  */
 
@@ -91,4 +94,16 @@ void SquareContainer::clear(void)
   theSquares = NULL;
   nextItem = currentSize = 0;
 
+}
+
+SquareContainer& SquareContainer::operator = (const SquareContainer& other)
+{
+  if (this != &other) {
+    clear();
+    currentSize = other.currentSize;
+    nextItem = other.nextItem;
+    theSquares = new Square[currentSize];
+    copy(theSquares, other.theSquares);
+  }
+  return *this;
 }
