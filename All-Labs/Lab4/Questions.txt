@@ -1,0 +1,54 @@
+Annie Boyd
+1/30/2026
+Lab 4 Questions
+
+Exercise 1
+
+Question 1: Do you think that MyClass::operator=() is doing a deep or shallow copy?
+MyClass::operator=() is attempting a deep copy but will face a memory leak
+
+Question 2: Do you notice any warning posted by the compiler? Is there a memory leak issue? How can you fix it?
+There is not warning by the compiler but there is a memory leak. If this already points to allocated memory, 
+then we're reassigning it without deleting it first. It can be fixed by calling clear(); before the copy.
+MyClass& MyClass::operator=(const MyClass& rhs)
+{
+    if (this != &rhs) {
+        clear();
+        copy(rhs);
+    }
+    return *this;
+}
+
+Question 3: Is MyClass::setIp() implemented correctly? What exactly does it do?
+
+Yes it's set up correctly. ip is a pointer that points to a stored int value and 
+setIp() changes the value stored at that pointer.
+
+Exercise 3
+
+Question 1: Look at the code in IteratorTest.cpp. What do you think it does? 
+
+The IteratorTest checks a custom iterator by assigning values through 
+dereferencing and incrementing, and then running through it again to check 
+if the answers are right. I thought it would compile but then it didn't 
+because there was an issue with const variable differences between 
+the .h and .cpp files for SquareContainer2. After fixing the const issue,
+I had to compile both IteratorTest.cpp and SquareContainer2.cpp together to get it to run.
+
+Question 2: Why do the iterator increment operators return an iterator? 
+How do the two increment operators differ? Is the iterator they return 
+allocated dynamically, auto, or something else?
+
+Iterators are based on values and act like pointers, not a heap object. 
+The two increment operators differ because the prefix increments and then 
+returns the new value, but postfix increments and then returns the previous 
+value, which could lead to issues. 
+
+Question 3: Change SquareContainer::iterator::operator*() so that it is a const method. 
+What is this supposed to mean? When you try to compile and run the program, what happens? 
+Does this appear to be consistent with the declaration of that operator as const? 
+Why or why not? In your opinion, should that operator be declared const?
+
+Declaring operator*() as const means dereferencing does not modify the iterator itself. 
+It still compiles and works because it returns a non const reference. 
+Based on this, I definitely think it should always be declared as const.

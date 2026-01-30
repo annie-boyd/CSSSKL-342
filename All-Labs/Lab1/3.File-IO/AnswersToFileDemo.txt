@@ -1,0 +1,15 @@
+Annie Boyd
+Lab 1
+Answers to FileDemo.cpp
+1/9/2026
+
+1. argc and argv are used so that a user can input command-line
+arguments at startup instead of prompting the user later on
+int argc stores the number of commands, including 1 for running the program,
+char* argv[] is an array with each command-line argument representing one element
+
+2. The default behavior when writing to a file is to overrwrite, but options 
+include ios::trunc to truncate, and ios::app to append.
+
+3. int top and int bottom are declared but not initialized until later,
+so at line 41 the starting value for both is 0.

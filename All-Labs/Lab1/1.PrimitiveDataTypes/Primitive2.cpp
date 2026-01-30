@@ -23,7 +23,7 @@ int main()
   std::cout << "Hello, World!\n";
 
   // Ugly output; how can we improve it a bit?
-  cout << "a is " << a;
+  cout << "a is " << a << endl;
   cout << "b is " << b;
   cout << "c is " << c;
   cout << "d is " << d;

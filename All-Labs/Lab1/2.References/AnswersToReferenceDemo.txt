@@ -1,0 +1,16 @@
+Annie Boyd
+Lab 1
+Answers to ReferenceDemo.cpp
+1/9/2026
+
+1. This code doesn't compile because the reference is not defined for int& xr at declaration, and a reference should always be defined.
+
+2. When onePlus is called, int a is passed by value, and then within the scope of the method it is increased by 1. The value of the variable isn't changed in main because it isn't passed by reference. If the parameter for the method was (int& a), it would be changed in the main. 
+
+3. In refIncrement(int& a), the same thing is happening as in onePlus, but it's passed by reference instead of by value so the variable changes in main as well.
+
+4. Pair is a struct with a name and an int value, pairs is a vector made of Pair structs. 
+
+5. value() receives a reference to constant string s, which means that no copy is made, but also the method cannot change the contents of the string outside of the scope of the method.
+
+6. value() returns a reference, and it's legal to use ++ because it increments the original reference (which is a returned int).

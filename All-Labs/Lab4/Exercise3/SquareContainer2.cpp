@@ -3,6 +3,8 @@
  *
  * Created by Michael Stiber
  * Modified by Yang Peng on 01/15/2018
+ * 
+ * Modified by Annie Boyd on 1/30/2026 for the lab exercise
  */
 
 #include <cstdlib>
@@ -43,7 +45,7 @@ SquareContainer::iterator::operator++(int)
 }
 
 // Returns the current item
-int& SquareContainer::iterator::operator*()
+int& SquareContainer::iterator::operator*() const
 {
 	// If we're past the end, it's really an error. You could throw an
 	// exception, if you like. Make sure you document the iterator's

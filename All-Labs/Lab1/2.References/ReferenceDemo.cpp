@@ -52,8 +52,7 @@ int main()
 
   cout << "Values of i, r, and x (after updating r): " << i << " " << r << " " << x << endl;
 
-  int& xr;
-  xr = x;
+  int& xr = x;
 
   cout << "Addresses of i, r, and x: " << &i << " " << &r << " " << &x << endl;
 
@@ -89,4 +88,3 @@ int main()
 
   return 0;
 }
-
